@@ -79,29 +79,33 @@
       0 20px 60px rgba(0,0,0,0.15);
     }
 
-    .hero::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
-      linear-gradient(
-      rgba(15,23,42,0.78),
-      rgba(15,23,42,0.78)),
-      url('image/hero.jpg');
-
-      background-size: cover;
-
-      background-position: center;
-
-      animation:
-      heroZoom 18s ease-in-out infinite alternate;
-
-      z-index: 0;
-    }
+      .hero::before {
+      
+        content: "";
+      
+        position: absolute;
+      
+        top: -5%;
+        left: -5%;
+      
+        width: 110%;
+        height: 110%;
+      
+        background:
+        linear-gradient(
+        rgba(15,23,42,0.78),
+        rgba(15,23,42,0.78)),
+        url('image/hero.jpg');
+      
+        background-size: cover;
+      
+        background-position: center;
+      
+        animation:
+        heroZoom 20s ease-in-out infinite alternate;
+      
+        z-index: 0;
+      }
 
     .hero-content {
 
@@ -140,16 +144,16 @@
 
     /* ANIMAÇÃO HERO */
 
-    @keyframes heroZoom {
-
-      from {
-        transform: scale(1);
+      @keyframes heroZoom {
+      
+        0% {
+          transform: scale(1) translateX(0px);
+        }
+      
+        100% {
+          transform: scale(1.08) translateX(-10px);
+        }
       }
-
-      to {
-        transform: scale(1.08);
-      }
-    }
 
     /* TITLES */
 
