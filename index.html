@@ -1,182 +1,532 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
   <meta charset="UTF-8">
   <title>Pessoa Vieira, Lda – Engenharia e Consultoria Industrial</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background-color: #f6f6f6;
+      font-family: 'Inter', Arial, sans-serif;
+
+      background:
+        linear-gradient(to bottom,
+          #f8fafc,
+          #eef2f7);
+
       color: #1f2933;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1320px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 30px;
     }
 
-    header {
-      max-width: 700px;
-      margin-bottom: 50px;
+    /* HERO */
+
+    .hero {
+      min-height: 62vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 90px 70px;
+
+      border-radius: 32px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.78),
+          rgba(15, 23, 42, 0.78)),
+        url('image/hero.jpg');
+
+      background-size: cover;
+      background-position: center;
+
+      color: white;
+
+      margin-bottom: 90px;
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18);
     }
 
-    h1 {
-      font-size: 46px;
-      margin: 0 0 10px;
-      font-weight: 600;
+    .hero-content {
+      max-width: 760px;
     }
 
-    h2 {
-      font-size: 22px;
+    .hero h1 {
+      font-size: 68px;
+      line-height: 1.05;
+      margin: 0 0 25px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      line-height: 1.7;
       font-weight: 400;
-      color: #606770;
+      color: rgba(255, 255, 255, 0.92);
       margin: 0;
     }
 
-    h3 {
-      font-size: 26px;
-      margin-bottom: 40px;
-      font-weight: 500;
+    /* TÍTULO */
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 50px;
+      font-weight: 600;
+      color: #0f172a;
     }
 
-    /* GRELHA */
+    /* GRID */
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 50px 40px;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+      gap: 35px;
     }
 
+    /* CARDS */
+
     .item {
-      text-align: left;
+      background: white;
+
+      border-radius: 24px;
+
       overflow: hidden;
-      cursor: pointer;
+
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+
+      box-shadow:
+        0 22px 45px rgba(0, 0, 0, 0.12);
     }
 
     .item img {
       width: 100%;
+
+      aspect-ratio: 4 / 3;
+
+      object-fit: cover;
+
       display: block;
-      margin-bottom: 14px;
-      transition: transform 0.35s ease;
+
+      transition: transform 0.4s ease;
     }
 
-    /* EFEITO ZOOM */
     .item:hover img {
-      transform: scale(1.08);
+      transform: scale(1.05);
+    }
+
+    .item-content {
+      padding: 24px;
     }
 
     .item p {
       margin: 0;
-      font-size: 17px;
-      color: #2d333a;
+
+      font-size: 20px;
+
+      line-height: 1.5;
+
+      font-weight: 500;
+
+      color: #1e293b;
     }
 
+    /* SOBRE */
+
+    .sobre {
+      margin-top: 100px;
+
+      background: white;
+
+      padding: 55px;
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.06);
+    }
+
+    .sobre h3 {
+      margin-top: 0;
+
+      font-size: 32px;
+
+      margin-bottom: 25px;
+
+      color: #0f172a;
+    }
+
+    .sobre p {
+      font-size: 19px;
+
+      line-height: 1.9;
+
+      color: #475569;
+
+      margin: 0;
+    }
+
+    /* INDICADORES */
+
+    .stats {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 25px;
+
+      margin-top: 80px;
+    }
+
+    .stat {
+      background: white;
+
+      padding: 35px;
+
+      border-radius: 24px;
+
+      text-align: center;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .stat-number {
+      font-size: 42px;
+
+      font-weight: 700;
+
+      color: #1d4ed8;
+
+      margin-bottom: 12px;
+    }
+
+    .stat-text {
+      font-size: 18px;
+
+      color: #475569;
+    }
+
+    /* CONTACTOS */
+
     .contactos {
-      margin-top: 60px;
-      max-width: 500px;
+      margin-top: 100px;
+
+      background: white;
+
+      padding: 50px;
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.06);
     }
 
     .contactos h3 {
-      margin-bottom: 15px;
+      margin-top: 0;
+
+      font-size: 32px;
+
+      margin-bottom: 20px;
+
+      color: #0f172a;
+    }
+
+    .contactos p {
+      font-size: 20px;
+
+      line-height: 1.8;
+
+      color: #475569;
     }
 
     .contactos a {
-      color: #1f2933;
+      color: #1d4ed8;
+
       text-decoration: none;
-      font-weight: 500;
+
+      font-weight: 600;
     }
+
+    .contactos a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
 
     footer {
-      margin-top: 100px;
-      font-size: 14px;
-      color: #7a7f85;
+      margin-top: 80px;
+
+      text-align: center;
+
+      padding: 30px 10px;
+
+      color: #64748b;
+
+      font-size: 15px;
     }
 
-    /* Pequena otimização para mobile */
+    /* MOBILE */
+
     @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
+
+      .container {
+        padding: 18px;
       }
 
-      h2 {
+      .hero {
+        min-height: auto;
+
+        padding: 60px 30px;
+
+        border-radius: 24px;
+
+        margin-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero h2 {
         font-size: 20px;
+
+        line-height: 1.6;
+      }
+
+      .section-title {
+        font-size: 28px;
+
+        margin-bottom: 35px;
+      }
+
+      .item p {
+        font-size: 18px;
+      }
+
+      .sobre,
+      .contactos {
+        padding: 35px 28px;
+      }
+
+      .sobre h3,
+      .contactos h3 {
+        font-size: 28px;
+      }
+
+      .sobre p,
+      .contactos p {
+        font-size: 17px;
+      }
+
+      .stat-number {
+        font-size: 36px;
       }
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
-    <header>
-      <h1>Pessoa Vieira, Lda</h1>
-      <h2>Engenharia e consultoria técnica para a indústria</h2>
-    </header>
+    <!-- HERO -->
 
-    <h3>Áreas de Atuação</h3>
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <h1>Pessoa Vieira, Lda</h1>
+
+        <h2>
+          Engenharia industrial e consultoria técnica
+          para empresas que procuram eficiência,
+          organização, crescimento e otimização operacional.
+        </h2>
+
+      </div>
+
+    </section>
+
+    <!-- ÁREAS -->
+
+    <h3 class="section-title">Áreas de Atuação</h3>
 
     <div class="grid">
 
       <div class="item">
         <img src="image/engenharia.png" alt="Engenharia e consultoria industrial">
-        <p>Engenharia e consultoria industrial</p>
+
+        <div class="item-content">
+          <p>Engenharia e consultoria industrial</p>
+        </div>
       </div>
 
       <div class="item">
         <img src="image/planeamento.png" alt="Planeamento e controlo da produção">
-        <p>Planeamento e controlo da produção</p>
+
+        <div class="item-content">
+          <p>Planeamento e controlo da produção</p>
+        </div>
       </div>
 
       <div class="item">
         <img src="image/supplychain.png" alt="Supply Chain e logística industrial">
-        <p>Supply Chain e logística industrial</p>
+
+        <div class="item-content">
+          <p>Supply Chain e logística industrial</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="image/capacidade.png" alt="Planeamento de capacidade e ramp-up industrial">
-        <p>Planeamento de capacidade e ramp‑up industrial</p>
+        <img src="image/capacidade.png"
+          alt="Planeamento de capacidade e ramp-up industrial">
+
+        <div class="item-content">
+          <p>Planeamento de capacidade e ramp-up industrial</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="image/lean.png" alt="Melhoria contínua e Lean Manufacturing">
-        <p>Melhoria contínua e Lean Manufacturing</p>
+        <img src="image/lean.png"
+          alt="Melhoria contínua e Lean Manufacturing">
+
+        <div class="item-content">
+          <p>Melhoria contínua e Lean Manufacturing</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="image/aeronautica.png" alt="Indústria aeronáutica e aeroestruturas">
-        <p>Indústria aeronáutica e aeroestruturas</p>
+        <img src="image/aeronautica.png"
+          alt="Indústria aeronáutica e aeroestruturas">
+
+        <div class="item-content">
+          <p>Indústria aeronáutica e aeroestruturas</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="image/projetos.png" alt="Gestão de projetos industriais">
-        <p>Gestão de projetos industriais</p>
+        <img src="image/projetos.png"
+          alt="Gestão de projetos industriais">
+
+        <div class="item-content">
+          <p>Gestão de projetos industriais</p>
+        </div>
       </div>
 
       <div class="item">
-        <img src="image/erp_mes.png" alt="ERP e MES">
-        <p>Implementação e otimização de sistemas ERP / MES</p>
+        <img src="image/erp_mes.png"
+          alt="ERP e MES">
+
+        <div class="item-content">
+          <p>Implementação e otimização de sistemas ERP / MES</p>
+        </div>
       </div>
 
     </div>
 
-    <div class="contactos">
+    <!-- SOBRE -->
+
+    <section class="sobre">
+
+      <h3>Sobre a Empresa</h3>
+
+      <p>
+        A Pessoa Vieira, Lda presta serviços de engenharia industrial,
+        consultoria técnica e otimização operacional para empresas industriais.
+        Atua em áreas como planeamento industrial, supply chain,
+        melhoria contínua, gestão de produção, ERP/MES e indústria aeronáutica,
+        com foco na eficiência, organização e crescimento sustentável.
+      </p>
+
+    </section>
+
+    <!-- INDICADORES -->
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="stat-number">+10</div>
+        <div class="stat-text">Anos de experiência</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">+50</div>
+        <div class="stat-text">Projetos industriais</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">Lean</div>
+        <div class="stat-text">Melhoria contínua</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">ERP</div>
+        <div class="stat-text">Integração e otimização</div>
+      </div>
+
+    </div>
+
+    <!-- CONTACTOS -->
+
+    <section class="contactos">
+
       <h3>Contactos</h3>
+
       <p>
         Email:
         <a href="mailto:geral@pessoavieira.pt">
           geral@pessoavieira.pt
         </a>
       </p>
-    </div>
+
+    </section>
+
+    <!-- FOOTER -->
 
     <footer>
       © Pessoa Vieira, Lda
     </footer>
 
   </div>
+
 </body>
+
 </html>
-``
