@@ -46,7 +46,7 @@
 
     .container {
 
-      max-width: 1320px;
+      max-width: 1380px;
 
       margin: auto;
 
@@ -138,7 +138,7 @@
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(320px, 1fr));
+      repeat(3, 1fr);
 
       gap: 35px;
     }
@@ -246,7 +246,7 @@
       display: grid;
 
       grid-template-columns:
-      repeat(auto-fit, minmax(220px, 1fr));
+      repeat(4, 1fr);
 
       gap: 25px;
 
@@ -349,7 +349,18 @@
       font-size: 15px;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
+
+    @media (max-width: 1100px) {
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     @media (max-width: 768px) {
 
@@ -384,6 +395,14 @@
         font-size: 28px;
 
         margin-bottom: 35px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
       }
 
       .item p {
@@ -516,6 +535,15 @@
         </div>
       </div>
 
+      <div class="item">
+        <img src="image/sap_phc_delmia.png"
+             alt="Sistemas ERP SAP PHC e MES DELMIA">
+
+        <div class="item-content">
+          <p>Sistemas ERP SAP, PHC e MES DELMIA</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- SOBRE -->
@@ -532,7 +560,7 @@
         A experiência inclui setores industriais e aeronáuticos,
         com participação em projetos de otimização operacional,
         implementação ERP/MES, Lean Manufacturing e gestão
-        de operações. :contentReference[oaicite:0]{index=0}
+        de operações.
       </p>
 
     </section>
