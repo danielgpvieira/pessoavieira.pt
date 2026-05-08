@@ -2,21 +2,27 @@
 <html lang="pt-PT">
 
 <head>
+
   <meta charset="UTF-8">
 
   <title>Pessoa Vieira – Engenharia e Consultoria Industrial</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT -->
+  <!-- FONTES -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
   <link rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <link href="https://fonts.cdnfonts.com/css/glot-round"
         rel="stylesheet">
 
   <style>
@@ -57,13 +63,13 @@
 
     .hero {
 
-      min-height: 220px;
+      min-height: 240px;
 
       display: flex;
 
       align-items: center;
 
-      padding: 40px 55px;
+      padding: 50px 60px;
 
       border-radius: 30px;
 
@@ -73,7 +79,7 @@
 
       color: white;
 
-      margin-bottom: 35px;
+      margin-bottom: 45px;
 
       box-shadow:
       0 20px 60px rgba(0,0,0,0.15);
@@ -89,8 +95,8 @@
 
       background:
       linear-gradient(
-      rgba(15,23,42,0.82),
-      rgba(15,23,42,0.82)),
+      rgba(15,23,42,0.84),
+      rgba(15,23,42,0.84)),
       url('image/hero.jpg');
 
       background-size: cover;
@@ -118,13 +124,13 @@
       linear-gradient(
       to right,
       transparent,
-      rgba(255,255,255,0.26),
+      rgba(255,255,255,0.18),
       transparent);
 
       transform: rotate(12deg);
 
       animation:
-      lightSweep 8s ease-in-out infinite;
+      lightSweep 9s ease-in-out infinite;
 
       z-index: 1;
     }
@@ -135,10 +141,12 @@
 
       z-index: 2;
 
-      max-width: 760px;
+      max-width: 850px;
     }
 
     .hero h1 {
+
+      font-family: 'Glot Round', sans-serif;
 
       font-size: 58px;
 
@@ -146,9 +154,13 @@
 
       margin: 0 0 18px;
 
-      font-weight: 700;
+      font-weight: 300;
 
-      letter-spacing: -2px;
+      letter-spacing: 12px;
+
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
 
     .hero h2 {
@@ -157,14 +169,14 @@
 
       line-height: 1.7;
 
-      font-weight: 400;
+      font-weight: 300;
+
+      letter-spacing: 1px;
 
       color: rgba(255,255,255,0.92);
 
       margin: 0;
     }
-
-    /* HERO LIGHT EFFECT */
 
     @keyframes lightSweep {
 
@@ -231,8 +243,6 @@
     .item img {
 
       width: 100%;
-
-      height: auto;
 
       display: block;
 
@@ -429,22 +439,21 @@
 
       .hero {
 
-        min-height: auto;
-
         padding: 35px 24px;
 
         border-radius: 24px;
-
-        margin-bottom: 40px;
       }
 
       .hero h1 {
-        font-size: 42px;
+
+        font-size: 38px;
+
+        letter-spacing: 7px;
       }
 
       .hero h2 {
 
-        font-size: 19px;
+        font-size: 18px;
 
         line-height: 1.6;
       }
@@ -452,8 +461,6 @@
       .section-title {
 
         font-size: 28px;
-
-        margin-bottom: 25px;
       }
 
       .grid {
@@ -464,34 +471,15 @@
         grid-template-columns: 1fr;
       }
 
-      .item p {
-        font-size: 18px;
-      }
-
       .sobre,
       .contactos {
 
         padding: 35px 28px;
       }
-
-      .sobre h3,
-      .contactos h3 {
-
-        font-size: 28px;
-      }
-
-      .sobre p,
-      .contactos p {
-
-        font-size: 17px;
-      }
-
-      .stat-number {
-        font-size: 36px;
-      }
     }
 
   </style>
+
 </head>
 
 <body>
@@ -507,8 +495,7 @@
         <h1>Pessoa Vieira</h1>
 
         <h2>
-          Engenharia industrial
-          para ambientes exigentes
+          Engenharia industrial para ambientes exigentes
         </h2>
 
       </div>
@@ -575,33 +562,6 @@
         </div>
       </div>
 
-      <div class="item">
-        <img src="image/projetos.png"
-             alt="Gestão de projetos industriais">
-
-        <div class="item-content">
-          <p>Gestão de projetos industriais</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/erp_mes.png"
-             alt="ERP e MES">
-
-        <div class="item-content">
-          <p>Implementação e otimização de sistemas ERP / MES</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/processo.png"
-             alt="Engenharia de processo e industrialização de produto">
-
-        <div class="item-content">
-          <p>Engenharia de processo e industrialização de produto</p>
-        </div>
-      </div>
-
     </div>
 
     <!-- SOBRE -->
@@ -612,51 +572,13 @@
 
       <p>
         A Pessoa Vieira resulta de experiência consolidada
-        em gestão industrial, supply chain, planeamento
+        em engenharia industrial, supply chain, planeamento
         de produção e melhoria contínua, desenvolvida
         em ambientes industriais de elevada exigência
-        e rigor operacional, incluindo o setor aeronáutico.
-
-        A experiência foi adquirida em contextos marcados
-        por elevados padrões de qualidade, forte controlo
-        de processos, planeamento rigoroso e foco contínuo
-        na eficiência operacional, com participação
-        em projetos multinacionais e ambientes industriais
-        altamente exigentes.
-
-        Inclui participação em projetos de otimização
-        operacional, implementação de sistemas ERP/MES,
-        Lean Manufacturing, planeamento industrial
-        e gestão de operações.
+        operacional, incluindo o setor aeronáutico.
       </p>
 
     </section>
-
-    <!-- INDICADORES -->
-
-    <div class="stats">
-
-      <div class="stat">
-        <div class="stat-number">15+</div>
-        <div class="stat-text">Anos de experiência industrial</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">ERP</div>
-        <div class="stat-text">SAP e PHC</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">MES</div>
-        <div class="stat-text">Digitalização industrial</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">Lean</div>
-        <div class="stat-text">5S, TPM, Kaizen e Kanban</div>
-      </div>
-
-    </div>
 
     <!-- CONTACTOS -->
 
@@ -665,10 +587,13 @@
       <h3>Contactos</h3>
 
       <p>
+
         Email:
+
         <a href="mailto:geral@pessoavieira.pt">
           geral@pessoavieira.pt
         </a>
+
       </p>
 
     </section>
