@@ -1,340 +1,799 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <title>PESSOA VIEIRA – Industrial Engineering & Consulting</title>
+
+  <title>PESSOA VIEIRA – Industrial Engineering and Consulting</title>
 
   <meta name="description"
-        content="Industrial engineering and consulting services focused on operational excellence, supply chain optimization, production planning, continuous improvement and ERP/MES systems implementation.">
+        content="Pessoa Vieira – Industrial engineering and consulting specialized in supply chain, production planning, continuous improvement, Lean Manufacturing, ERP/MES and operational optimization.">
 
-  <link rel="canonical" href="https://pessoavieira.pt/en/">
+  <meta name="author"
+        content="Pessoa Vieira">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots"
+        content="index, follow">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <!-- CANONICAL -->
+
+  <link rel="canonical"
+        href="https://pessoavieira.pt/en/">
+
+  <!-- HREFLANG -->
+
+  <link rel="alternate"
+        hreflang="pt-PT"
+        href="https://pessoavieira.pt/">
+
+  <link rel="alternate"
+        hreflang="en"
+        href="https://pessoavieira.pt/en/">
+
+  <link rel="alternate"
+        hreflang="x-default"
+        href="https://pessoavieira.pt/">
+
+  <!-- FAVICON -->
+
+  <link rel="icon"
+        type="image/png"
+        href="/image/favicon.png">
+
+  <!-- PRELOAD IMAGES -->
+
+  <link rel="preload"
+        as="image"
+        href="../image/logo_en.png">
+
+  <link rel="preload"
+        as="image"
+        href="../image/hero_en.jpg">
+
+  <!-- OPEN GRAPH -->
+
+  <meta property="og:type"
+        content="website">
+
+  <meta property="og:title"
+        content="PESSOA VIEIRA – Industrial Engineering and Consulting">
+
+  <meta property="og:description"
+        content="Industrial consulting specialized in operational excellence, supply chain, production planning and industrial transformation.">
+
+  <meta property="og:url"
+        content="https://pessoavieira.pt/en/">
+
+  <meta property="og:image"
+        content="https://pessoavieira.pt/image/hero_en.jpg">
+
+  <meta property="og:locale"
+        content="en_GB">
+
+  <!-- TWITTER -->
+
+  <meta name="twitter:card"
+        content="summary_large_image">
+
+  <meta name="twitter:title"
+        content="PESSOA VIEIRA – Industrial Engineering and Consulting">
+
+  <meta name="twitter:description"
+        content="Industrial consulting focused on operational efficiency, supply chain and continuous improvement.">
+
+  <meta name="twitter:image"
+        content="https://pessoavieira.pt/image/hero_en.jpg">
 
   <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+  <!-- STRUCTURED DATA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Pessoa Vieira",
+    "url": "https://pessoavieira.pt/en/",
+    "logo": "https://pessoavieira.pt/image/logo_en.png",
+    "image": "https://pessoavieira.pt/image/hero_en.jpg",
+    "description": "Industrial engineering and consulting services specialized in supply chain, production planning, Lean Manufacturing, ERP/MES and operational optimization.",
+    "email": "geral@pessoavieira.pt",
+    "areaServed": "Europe",
+    "serviceType": [
+      "Industrial Engineering",
+      "Industrial Consulting",
+      "Supply Chain",
+      "Lean Manufacturing",
+      "ERP/MES"
+    ]
+  }
+  </script>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
+
       margin: 0;
+
       font-family: 'Inter', Arial, sans-serif;
-      background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+
+      background:
+      linear-gradient(
+      to bottom,
+      #f8fafc,
+      #eef2f7);
+
       color: #1f2933;
     }
 
     .container {
+
       max-width: 1380px;
+
       margin: auto;
+
       padding: 24px;
     }
 
-    /* HERO */
-    .hero {
-      min-height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 45px 55px;
-      border-radius: 30px;
-      overflow: hidden;
-      position: relative;
-      color: white;
-      margin-bottom: 35px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    }
+.hero {
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
-        url('/image/hero_en.jpg');
-      background-size: cover;
-      background-position: center;
-      z-index: 0;
-    }
+  min-height: 260px;
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -20%;
-      width: 55%;
-      height: 200%;
-      background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,0.18),
-        transparent
-      );
-      transform: rotate(12deg);
-      animation: lightSweep 8s ease-in-out infinite;
-      z-index: 1;
-    }
+  display: flex;
 
-    @keyframes lightSweep {
-      0% { left: -40%; }
-      100% { left: 120%; }
-    }
+  align-items: center;
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
+  justify-content: center;
 
-    /* LANGUAGE BUTTON */
-    .lang-btn {
-      position: absolute;
-      top: 26px;
-      right: 30px;
-      z-index: 5;
-      color: white;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(8px);
-    }
+  padding: 45px 55px;
 
-    .hero-logo {
-      width: 100%;
-      max-width: 1050px;
-      display: block;
-    }
+  border-radius: 30px;
 
-    .section-title {
-      font-size: 34px;
-      margin-bottom: 30px;
-      font-weight: 600;
-      color: #0f172a;
-    }
+  overflow: hidden;
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
-    }
+  position: relative;
 
-    .item {
-      background: white;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
+  color: white;
 
-    .item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 22px 45px rgba(0,0,0,0.12);
-    }
+  margin-bottom: 35px;
 
-    .item img {
-      width: 100%;
-      display: block;
-    }
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.15);
+}
 
-    .item-content {
-      padding: 24px;
-    }
+.hero::before {
 
-    .item p {
-      margin: 0;
-      font-size: 20px;
-      line-height: 1.5;
-      font-weight: 500;
-      color: #1e293b;
-    }
+  content: "";
 
-    /* ABOUT */
-    .sobre {
-      margin-top: 55px;
-      background: white;
-      padding: 50px;
-      border-radius: 30px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-    }
+  position: absolute;
 
-    .sobre h3 {
-      margin-top: 0;
-      font-size: 32px;
-      margin-bottom: 25px;
-      color: #0f172a;
-    }
+  inset: 0;
 
-    .sobre p {
-      font-size: 19px;
-      line-height: 1.9;
-      color: #475569;
-      margin: 0;
-    }
+  background:
+  linear-gradient(
+  rgba(15,23,42,0.82),
+  rgba(15,23,42,0.82)),
+  url('../image/hero_en.jpg');
 
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      margin-top: 45px;
-    }
+  background-size: cover;
 
-    .stat {
-      background: white;
-      padding: 35px;
-      border-radius: 24px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
+  background-position: center;
 
-    .stat-number {
-      font-size: 42px;
-      font-weight: 700;
-      color: #1d4ed8;
-      margin-bottom: 12px;
-    }
+  z-index: 0;
+}
 
-    .stat-text {
-      font-size: 18px;
-      color: #475569;
-    }
+.hero::after {
 
-    /* CONTACT */
-    .contactos {
-      margin-top: 50px;
-      background: white;
-      padding: 50px;
-      border-radius: 30px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-    }
+  content: "";
 
-    footer {
-      margin-top: 80px;
-      text-align: center;
-      padding: 30px 10px;
-      color: #64748b;
-      font-size: 15px;
-    }
+  position: absolute;
+
+  top: -50%;
+
+  left: -20%;
+
+  width: 55%;
+
+  height: 200%;
+
+  background:
+  linear-gradient(
+  to right,
+  transparent,
+  rgba(255,255,255,0.18),
+  transparent);
+
+  transform: rotate(12deg);
+
+  animation:
+  lightSweep 8s ease-in-out infinite;
+
+  z-index: 1;
+}
+
+@keyframes lightSweep {
+
+  0% {
+    left: -40%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+.lang-btn {
+
+  position: absolute;
+
+  top: 26px;
+
+  right: 30px;
+
+  z-index: 5;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  padding: 9px 14px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+  background 0.3s ease,
+  border-color 0.3s ease,
+  transform 0.3s ease;
+}
+
+.lang-btn:hover {
+
+  background: rgba(255,255,255,0.14);
+
+  border-color: rgba(255,255,255,0.32);
+
+  transform: translateY(-2px);
+}
+
+.hero-logo {
+
+  width: 100%;
+
+  max-width: 1050px;
+
+  height: auto;
+
+  display: block;
+}
+
+.section-title {
+
+  font-size: 34px;
+
+  margin-bottom: 30px;
+
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+.item {
+
+  background: white;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.08);
+
+  transition:
+  transform 0.35s ease,
+  box-shadow 0.35s ease;
+}
+
+.item:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+  0 22px 45px rgba(0,0,0,0.12);
+}
+
+.item img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.03);
+}
+
+.item-content {
+  padding: 24px;
+}
+
+.item p {
+
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  color: #1e293b;
+}
+
+.sobre {
+
+  margin-top: 55px;
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 30px;
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.06);
+}
+
+.sobre h2 {
+
+  margin-top: 0;
+
+  font-size: 32px;
+
+  margin-bottom: 25px;
+
+  color: #0f172a;
+}
+
+.sobre p {
+
+  font-size: 19px;
+
+  line-height: 1.9;
+
+  color: #475569;
+
+  margin: 0;
+}
+
+.stats {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-top: 45px;
+}
+
+.stat {
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.06);
+}
+
+.stat-number {
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  color: #1d4ed8;
+
+  margin-bottom: 12px;
+}
+
+.stat-text {
+
+  font-size: 18px;
+
+  color: #475569;
+}
+
+.contactos {
+
+  margin-top: 50px;
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 30px;
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.06);
+}
+
+.contactos h2 {
+
+  margin-top: 0;
+
+  font-size: 32px;
+
+  margin-bottom: 20px;
+
+  color: #0f172a;
+}
+
+.contactos p {
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: #475569;
+}
+
+.contactos a {
+
+  color: #1d4ed8;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.contactos a:hover {
+  text-decoration: underline;
+}
+
+footer {
+
+  margin-top: 80px;
+
+  text-align: center;
+
+  padding: 30px 10px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.cookie-banner {
+
+  position: fixed;
+
+  bottom: 18px;
+
+  left: 18px;
+
+  right: 18px;
+
+  background: rgba(15,23,42,0.96);
+
+  color: white;
+
+  padding: 18px 22px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  z-index: 9999;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.25);
+}
+
+.cookie-banner p {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: rgba(255,255,255,0.92);
+
+  flex: 1;
+}
+
+.cookie-banner button {
+
+  background: #1d4ed8;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 18px;
+  }
+
+  .grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cookie-banner {
+
+    left: 10px;
+
+    right: 10px;
+
+    bottom: 10px;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cookie-banner button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    font-size: 16px;
+  }
+}
+
   </style>
+
 </head>
 
 <body>
+
+<main>
+
 <div class="container">
 
-  <!-- HERO -->
-  <section class="hero">
-    <a href="/" class="lang-btn">PT</a>
-    <div class="hero-content">
-      <img src="/image/logo_en.png" alt="Pessoa Vieira" class="hero-logo">
-    </div>
-  </section>
+<section class="hero">
 
-  <!-- CAPABILITIES -->
-  <h3 class="section-title">Capabilities</h3>
-  <div class="grid">
-    <div class="item">
-      <img src="/image/engenharia_en.png" alt="Industrial engineering and consulting">
-      <div class="item-content"><p>Industrial engineering and consulting</p></div>
-    </div>
+  <a href="/" class="lang-btn">
+    PT
+  </a>
 
-    <div class="item">
-      <img src="/image/planeamento_en.png" alt="Production planning and control">
-      <div class="item-content"><p>Production planning and control</p></div>
-    </div>
+  <div class="hero-content">
 
-    <div class="item">
-      <img src="/image/supplychain_en.png" alt="Supply chain and industrial logistics management">
-      <div class="item-content"><p>Supply chain and industrial logistics management</p></div>
-    </div>
+    <img src="../image/logo_en.png"
+         alt="Pessoa Vieira - Industrial Engineering and Consulting"
+         class="hero-logo">
 
-    <div class="item">
-      <img src="/image/capacidade_en.png" alt="Capacity planning and industrial ramp-up">
-      <div class="item-content"><p>Capacity planning and industrial ramp-up</p></div>
-    </div>
+  </div>
 
-    <div class="item">
-      <img src="/image/lean_en.png" alt="Continuous improvement and Lean Manufacturing">
-      <div class="item-content"><p>Continuous improvement and Lean Manufacturing</p></div>
-    </div>
+</section>
 
-    <div class="item">
-      <img src="/image/aeronautica_en.png" alt="Aeronautical industry and aerostructures">
-      <div class="item-content"><p>Aeronautical industry and aerostructures</p></div>
-    </div>
+<h1 class="section-title">
+  Industrial Engineering and Consulting
+</h1>
 
-    <div class="item">
-      <img src="/image/projetos_en.png" alt="Industrial project management">
-      <div class="item-content"><p>Industrial project management</p></div>
-    </div>
+<div class="grid">
 
-    <div class="item">
-      <img src="/image/erp_mes_en.png" alt="ERP and MES systems implementation">
-      <div class="item-content"><p>ERP / MES systems implementation and optimization</p></div>
-    </div>
+  <div class="item">
+    <img src="../image/engenharia_en.png"
+         alt="Industrial engineering and consulting"
+         loading="lazy">
 
-    <div class="item">
-      <img src="/image/processo_en.png" alt="Process engineering and product industrialization">
-      <div class="item-content"><p>Process engineering and product industrialization</p></div>
+    <div class="item-content">
+      <p>Industrial engineering and consulting focused on operational efficiency and sustainable growth.</p>
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section class="sobre">
-    <h3>About the Company</h3>
-    <p>
-      Pessoa Vieira is an industrial engineering and consulting company,
-      supported by solid experience in operations management, supply chain,
-      production planning and continuous improvement.
-      <br><br>
-      This experience has been developed in highly demanding industrial
-      environments, with high standards of operational rigor and performance,
-      including the aeronautical sector.
-    </p>
-  </section>
+  <div class="item">
+    <img src="../image/planeamento_en.png"
+         alt="Production planning and control"
+         loading="lazy">
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-number">15+</div>
-      <div class="stat-text">Years of experience in industrial consulting</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-number">ERP</div>
-      <div class="stat-text">SAP and PHC systems</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-number">MES</div>
-      <div class="stat-text">Manufacturing Execution Systems</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-number">Lean</div>
-      <div class="stat-text">5S, TPM, Kaizen and Kanban</div>
+    <div class="item-content">
+      <p>Production planning and control focused on productivity, capacity and operational reliability.</p>
     </div>
   </div>
 
-  <!-- CONTACT -->
-  <section class="contactos">
-    <h3>Contact</h3>
-    <p>
-      For further information or business inquiries:<br>
-      <a href="mailto:geral@pessoavieira.pt">geral@pessoavieira.pt</a>
-    </p>
-  </section>
+  <div class="item">
+    <img src="../image/supplychain_en.png"
+         alt="Supply chain and industrial logistics"
+         loading="lazy">
 
-  <footer>© Pessoa Vieira, Lda</footer>
+    <div class="item-content">
+      <p>Supply chain and industrial logistics optimization for highly demanding environments.</p>
+    </div>
+  </div>
+
 </div>
+
+<section class="sobre">
+
+  <h2>About the Company</h2>
+
+  <p>
+    Pessoa Vieira provides industrial engineering and consulting services based on extensive experience in industrial management, supply chain, production planning and continuous improvement. Experience acquired in highly demanding industrial environments, including the aerospace sector, enables the delivery of solutions focused on operational efficiency, process optimization and sustainable business growth.
+  </p>
+
+</section>
+
+<div class="stats">
+
+  <div class="stat">
+    <div class="stat-number">15+</div>
+    <div class="stat-text">Years of industrial experience</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">ERP</div>
+    <div class="stat-text">SAP and PHC experience</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">MES</div>
+    <div class="stat-text">Industrial digitalization</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">Lean</div>
+    <div class="stat-text">5S, TPM, Kaizen and Kanban</div>
+  </div>
+
+</div>
+
+<section class="contactos">
+
+  <h2>Contacts</h2>
+
+  <p>
+    For further information or business inquiries:
+  </p>
+
+  <p>
+
+    <a href="mailto:geral@pessoavieira.pt">
+      geral@pessoavieira.pt
+    </a>
+
+  </p>
+
+</section>
+
+<footer>
+  © Pessoa Vieira, Lda
+</footer>
+
+</div>
+
+</main>
+
+<!-- COOKIE NOTICE -->
+
+<div id="cookie-banner" class="cookie-banner">
+
+  <p>
+    This website uses cookies to improve the browsing experience.
+    By continuing to use the website, you accept the use of cookies.
+  </p>
+
+  <button id="accept-cookies">
+    Accept
+  </button>
+
+</div>
+
+<script>
+
+const cookieBanner =
+  document.getElementById('cookie-banner');
+
+const acceptCookies =
+  document.getElementById('accept-cookies');
+
+if (localStorage.getItem('cookiesAccepted')) {
+
+  cookieBanner.style.display = 'none';
+}
+
+acceptCookies.addEventListener('click', () => {
+
+  localStorage.setItem(
+    'cookiesAccepted',
+    'true'
+  );
+
+  cookieBanner.style.display = 'none';
+});
+
+</script>
+
 </body>
+
 </html>
