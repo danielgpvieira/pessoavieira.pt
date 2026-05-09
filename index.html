@@ -3,17 +3,6 @@
 
 <head>
 
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH2MDTXFXH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZH2MDTXFXH');
-  </script>
-
-
   <meta charset="UTF-8">
 
   <title>PESSOA VIEIRA – Engenharia e Consultoria Industrial</title>
@@ -30,14 +19,7 @@
         href="https://fonts.gstatic.com"
         crossorigin>
 
-  <!-- INTER -->
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <!-- GLOT ROUND -->
-
-  <link href="https://fonts.cdnfonts.com/css/glot-round"
         rel="stylesheet">
 
   <style>
@@ -78,13 +60,13 @@
 
     .hero {
 
-      min-height: 220px;
+      min-height: 260px;
 
       display: flex;
 
       align-items: center;
 
-      padding: 40px 55px;
+      padding: 45px 55px;
 
       border-radius: 30px;
 
@@ -139,7 +121,7 @@
       linear-gradient(
       to right,
       transparent,
-      rgba(255,255,255,0.26),
+      rgba(255,255,255,0.18),
       transparent);
 
       transform: rotate(12deg);
@@ -150,61 +132,6 @@
       z-index: 1;
     }
 
-    .hero-content {
-
-      position: relative;
-
-      z-index: 2;
-
-      max-width: 760px;
-    }
-
-    /* TÍTULO */
-
-    .hero h1 {
-
-      font-family: 'Glot Round', sans-serif;
-
-      font-size: 58px;
-
-      line-height: 1.05;
-
-      margin: 0 0 18px;
-
-      font-weight: 300;
-
-      letter-spacing: 12px;
-
-      text-transform: uppercase;
-
-      color: #ffffff;
-    }
-
-    /* SUBTÍTULO */
-
-    .hero h2 {
-
-      font-family:
-      'Abadi MT Condensed Light',
-      'Arial Narrow',
-      sans-serif;
-
-      font-size: 22px;
-
-      line-height: 1.7;
-
-      font-weight: 400;
-
-      letter-spacing: 4.5px;
-      word-spacing: 12px;
-
-      color: rgba(255,255,255,0.92);
-
-      margin: 0;
-    }
-
-    /* HERO LIGHT EFFECT */
-
     @keyframes lightSweep {
 
       0% {
@@ -214,6 +141,28 @@
       100% {
         left: 120%;
       }
+    }
+
+    /* HERO CONTENT */
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    /* LOGO */
+
+    .hero-logo {
+
+      width: 100%;
+
+      max-width: 1050px;
+
+      height: auto;
+
+      display: block;
     }
 
     /* TITLES */
@@ -477,18 +426,9 @@
         margin-bottom: 40px;
       }
 
-      .hero h1 {
+      .hero-logo {
 
-        font-size: 42px;
-
-        letter-spacing: 7px;
-      }
-
-      .hero h2 {
-
-        font-size: 19px;
-
-        line-height: 1.6;
+        max-width: 100%;
       }
 
       .section-title {
@@ -547,11 +487,9 @@
 
       <div class="hero-content">
 
-        <h1>PESSOA  VIEIRA</h1>
-
-        <h2>
-          Engenharia industrial para ambientes exigentes
-        </h2>
+        <img src="image/logo.png"
+             alt="Pessoa Vieira"
+             class="hero-logo">
 
       </div>
 
@@ -717,5 +655,3 @@
 </body>
 
 </html>
-
-
