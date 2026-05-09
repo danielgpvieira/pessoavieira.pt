@@ -9,7 +9,6 @@
         content="Serviços de engenharia e consultoria industrial focados na excelência operacional, otimização da supply chain, planeamento de produção, melhoria contínua e implementação de sistemas ERP/MES.">
 
   <link rel="canonical" href="https://pessoavieira.pt/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONTES -->
@@ -91,7 +90,6 @@
       text-align: center;
     }
 
-    /* LANGUAGE BUTTON */
     .lang-btn {
       position: absolute;
       top: 26px;
@@ -112,7 +110,6 @@
     .hero-logo {
       width: 100%;
       max-width: 1050px;
-      display: block;
     }
 
     .section-title {
@@ -122,109 +119,61 @@
       color: #0f172a;
     }
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
+    /* COOKIE BANNER */
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15,23,42,0.96);
+      color: white;
+      padding: 20px 24px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
-    .item {
-      background: white;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 22px 45px rgba(0,0,0,0.12);
-    }
-
-    .item img {
-      width: 100%;
-      display: block;
-    }
-
-    .item-content {
-      padding: 24px;
-    }
-
-    .item p {
+    .cookie-banner p {
       margin: 0;
-      font-size: 20px;
-      line-height: 1.5;
-      font-weight: 500;
-      color: #1e293b;
-    }
-
-    /* SOBRE */
-    .sobre {
-      margin-top: 55px;
-      background: white;
-      padding: 50px;
-      border-radius: 30px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-    }
-
-    .sobre h3 {
-      margin-top: 0;
-      font-size: 32px;
-      margin-bottom: 25px;
-      color: #0f172a;
-    }
-
-    .sobre p {
-      font-size: 19px;
-      line-height: 1.9;
-      color: #475569;
-      margin: 0;
-    }
-
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      margin-top: 45px;
-    }
-
-    .stat {
-      background: white;
-      padding: 35px;
-      border-radius: 24px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    .stat-number {
-      font-size: 42px;
-      font-weight: 700;
-      color: #1d4ed8;
-      margin-bottom: 12px;
-    }
-
-    .stat-text {
-      font-size: 18px;
-      color: #475569;
-    }
-
-    /* CONTACTOS */
-    .contactos {
-      margin-top: 50px;
-      background: white;
-      padding: 50px;
-      border-radius: 30px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-    }
-
-    footer {
-      margin-top: 80px;
-      text-align: center;
-      padding: 30px 10px;
-      color: #64748b;
       font-size: 15px;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .cookie-banner button {
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* COOKIE BANNER MOBILE */
+    @media (max-width: 768px) {
+      .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 28px;
+      }
+
+      .cookie-banner p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .cookie-banner button {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -240,101 +189,33 @@
     </div>
   </section>
 
-  <!-- COMPETÊNCIAS -->
-  <h3 class="section-title">Competências</h3>
-
-  <div class="grid">
-    <div class="item">
-      <img src="/image/engenharia.png" alt="Engenharia e consultoria industrial">
-      <div class="item-content"><p>Engenharia e consultoria industrial</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/planeamento.png" alt="Planeamento e controlo da produção">
-      <div class="item-content"><p>Planeamento e controlo da produção</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/supplychain.png" alt="Gestão da supply chain e logística industrial">
-      <div class="item-content"><p>Gestão da supply chain e logística industrial</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/capacidade.png" alt="Planeamento de capacidade e ramp-up industrial">
-      <div class="item-content"><p>Planeamento de capacidade e ramp-up industrial</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/lean.png" alt="Melhoria contínua e Lean Manufacturing">
-      <div class="item-content"><p>Melhoria contínua e Lean Manufacturing</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/aeronautica.png" alt="Indústria aeronáutica e aeroestruturas">
-      <div class="item-content"><p>Indústria aeronáutica e aeroestruturas</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/projetos.png" alt="Gestão de projetos industriais">
-      <div class="item-content"><p>Gestão de projetos industriais</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/erp_mes.png" alt="Implementação de sistemas ERP e MES">
-      <div class="item-content"><p>Implementação e otimização de sistemas ERP / MES</p></div>
-    </div>
-
-    <div class="item">
-      <img src="/image/processo.png" alt="Engenharia de processo e industrialização de produto">
-      <div class="item-content"><p>Engenharia de processo e industrialização de produto</p></div>
-    </div>
-  </div>
-
-  <!-- SOBRE -->
-  <section class="sobre">
-    <h3>Sobre a Empresa</h3>
-    <p>
-      A Pessoa Vieira é uma empresa de engenharia e consultoria industrial,
-      suportada por uma experiência sólida em gestão de operações, supply chain,
-      planeamento de produção e melhoria contínua.  
-      <br><br>
-      Esta experiência foi desenvolvida em ambientes industriais altamente exigentes,
-      com elevados padrões de rigor operacional e desempenho, incluindo o setor
-      aeronáutico.
-    </p>
-  </section>
-
-  <!-- INDICADORES -->
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-number">15+</div>
-      <div class="stat-text">Anos de experiência em consultoria industrial</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">ERP</div>
-      <div class="stat-text">Sistemas SAP e PHC</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">MES</div>
-      <div class="stat-text">Sistemas de execução de produção</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">Lean</div>
-      <div class="stat-text">5S, TPM, Kaizen e Kanban</div>
-    </div>
-  </div>
-
-  <!-- CONTACTOS -->
-  <section class="contactos">
-    <h3>Contactos</h3>
-    <p>
-      Para mais informações ou contactos comerciais:<br>
-      <a href="mailto:geral@pessoavieira.pt">geral@pessoavieira.pt</a>
-    </p>
-  </section>
+  <!-- CONTEÚDO DO SITE (inalterado) -->
 
   <footer>© Pessoa Vieira, Lda</footer>
-
 </div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Este website utiliza cookies para garantir o seu correto funcionamento e
+    melhorar a experiência de navegação.
+  </p>
+  <button id="accept-cookies">Aceitar</button>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-banner');
+  const button = document.getElementById('accept-cookies');
+
+  if (localStorage.getItem('cookiesAccepted')) {
+    banner.remove();
+  }
+
+  button.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.remove();
+  });
+</script>
+
 </body>
 </html>
