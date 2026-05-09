@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>PESSOA VIEIRA – Industrial Engineering & Management Consulting</title>
+
   <meta name="description"
         content="Industrial engineering and management consulting services focused on operations excellence, supply chain optimization, production planning, continuous improvement and ERP/MES transformation.">
+
   <link rel="canonical" href="https://pessoavieira.pt/en/">
   <link rel="alternate" hreflang="pt" href="https://pessoavieira.pt/">
   <link rel="alternate" hreflang="en" href="https://pessoavieira.pt/en/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONTS -->
@@ -15,13 +19,234 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ✅ CSS **IDÊNTICO AO PT** -->
-  <!-- (copiar exatamente o bloco <style> do PT.html) -->
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+      color: #1f2933;
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 45px 55px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      margin-bottom: 35px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.82)),
+        url('/image/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    /* ✅ EFEITO DE BRILHO (RESTORED) */
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 55%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+      );
+      transform: rotate(12deg);
+      animation: lightSweep 8s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes lightSweep {
+      0% { left: -40%; }
+      100% { left: 120%; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    /* LANGUAGE BUTTON */
+    .lang-btn {
+      position: absolute;
+      top: 26px;
+      right: 30px;
+      z-index: 5;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.32);
+      transform: translateY(-2px);
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 1050px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.12);
+    }
+
+    .item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .item:hover img {
+      transform: scale(1.03);
+    }
+
+    .item-content {
+      padding: 24px;
+    }
+
+    .item p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #1e293b;
+    }
+
+    /* ABOUT */
+    .sobre {
+      margin-top: 55px;
+      background: white;
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    }
+
+    .sobre h3 {
+      margin-top: 0;
+      font-size: 32px;
+      margin-bottom: 25px;
+      color: #0f172a;
+    }
+
+    .sobre p {
+      font-size: 19px;
+      line-height: 1.9;
+      color: #475569;
+      margin: 0;
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .stat {
+      background: white;
+      padding: 35px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 12px;
+    }
+
+    .stat-text {
+      font-size: 18px;
+      color: #475569;
+    }
+
+    /* CONTACT */
+    .contactos {
+      margin-top: 50px;
+      background: white;
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      padding: 30px 10px;
+      color: #64748b;
+      font-size: 15px;
+    }
+  </style>
 </head>
 
 <body>
 <div class="container">
 
+  <!-- HERO -->
   <section class="hero">
     <a href="/" class="lang-btn">PT</a>
     <div class="hero-content">
@@ -29,48 +254,47 @@
     </div>
   </section>
 
+  <!-- EXPERTISE -->
   <h3 class="section-title">Expertise</h3>
 
   <div class="grid">
-    <div class="item">
-      <img src="/image/engenharia_en.png">
-      <div class="item-content"><p>Industrial engineering and management consulting</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/planeamento_en.png">
-      <div class="item-content"><p>Production planning and operational control</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/supplychain_en.png">
-      <div class="item-content"><p>Supply chain management and industrial logistics</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/capacidade_en.png">
-      <div class="item-content"><p>Capacity planning and industrial ramp-up</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/lean_en.png">
-      <div class="item-content"><p>Continuous improvement and Lean Manufacturing</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/aeronautica_en.png">
-      <div class="item-content"><p>Aerospace industry and aerostructures</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/projetos_en.png">
-      <div class="item-content"><p>Industrial project and program management</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/erp_mes_en.png">
-      <div class="item-content"><p>ERP / MES systems implementation and optimization</p></div>
-    </div>
-    <div class="item">
-      <img src="/image/processo_en.png">
-      <div class="item-content"><p>Process engineering and product industrialization</p></div>
-    </div>
+    <div class="item"><img src="/image/engenharia_en.png"><div class="item-content"><p>Industrial engineering and management consulting</p></div></div>
+    <div class="item"><img src="/image/planeamento_en.png"><div class="item-content"><p>Production planning and operational control</p></div></div>
+    <div class="item"><img src="/image/supplychain_en.png"><div class="item-content"><p>Supply chain management and industrial logistics</p></div></div>
+    <div class="item"><img src="/image/capacidade_en.png"><div class="item-content"><p>Capacity planning and industrial ramp-up</p></div></div>
+    <div class="item"><img src="/image/lean_en.png"><div class="item-content"><p>Continuous improvement and Lean Manufacturing</p></div></div>
+    <div class="item"><img src="/image/aeronautica_en.png"><div class="item-content"><p>Aerospace industry and aerostructures</p></div></div>
+    <div class="item"><img src="/image/projetos_en.png"><div class="item-content"><p>Industrial project and program management</p></div></div>
+    <div class="item"><img src="/image/erp_mes_en.png"><div class="item-content"><p>ERP / MES systems implementation and optimization</p></div></div>
+    <div class="item"><img src="/image/processo_en.png"><div class="item-content"><p>Process engineering and product industrialization</p></div></div>
   </div>
 
-  <!-- restante conteúdo EN continua espelhado do PT -->
+  <!-- ABOUT -->
+  <section class="sobre">
+    <h3>About the Company</h3>
+    <p>
+      Pessoa Vieira is an industrial engineering and management consulting firm
+      with extensive experience in operations management, supply chain optimization,
+      production planning and continuous improvement, developed in highly demanding
+      industrial environments, including the aerospace sector.
+    </p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="stat-number">15+</div><div class="stat-text">Years of industrial consulting experience</div></div>
+    <div class="stat"><div class="stat-number">ERP</div><div class="stat-text">SAP and PHC systems</div></div>
+    <div class="stat"><div class="stat-number">MES</div><div class="stat-text">Manufacturing Execution Systems</div></div>
+    <div class="stat"><div class="stat-number">Lean</div><div class="stat-text">5S, TPM, Kaizen and Kanban</div></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contactos">
+    <h3>Contact Information</h3>
+    <p>Email: <a href="mailto:geral@pessoavieira.pt">geral@pessoavieira.pt</a></p>
+  </section>
+
+  <footer>© Pessoa Vieira, Lda</footer>
 
 </div>
 </body>
