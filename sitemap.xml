@@ -4,7 +4,10 @@
 
   <url>
     <loc>https://pessoavieira.pt/</loc>
-    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://pessoavieira.pt/en/</loc>
   </url>
 
 </urlset>
