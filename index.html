@@ -44,15 +44,15 @@
         type="image/png"
         href="/image/favicon.png">
 
-  <!-- PRELOAD IMAGENS -->
+  <!-- PRELOAD IMAGES -->
 
   <link rel="preload"
         as="image"
-        href="image/logo.png">
+        href="../image/logo.png">
 
   <link rel="preload"
         as="image"
-        href="image/hero.jpg">
+        href="../image/hero.jpg">
 
   <!-- OPEN GRAPH -->
 
@@ -83,12 +83,12 @@
         content="PESSOA VIEIRA – Engenharia e Consultoria Industrial">
 
   <meta name="twitter:description"
-        content="Consultoria industrial orientada para eficiência operacional, supply chain e melhoria contínua.">
+        content="Consultoria industrial focada em eficiência operacional, supply chain e melhoria contínua.">
 
   <meta name="twitter:image"
         content="https://www.pessoavieira.pt/image/hero.jpg">
 
-  <!-- FONTES -->
+  <!-- FONTS -->
 
   <link rel="preconnect"
         href="https://fonts.googleapis.com">
@@ -100,19 +100,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-  <!-- DADOS ESTRUTURADOS -->
+  <!-- STRUCTURED DATA -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Pessoa Vieira",
-    "url": "https://pessoavieira.pt",
+    "url": "https://pessoavieira.pt/",
     "logo": "https://pessoavieira.pt/image/logo.png",
     "image": "https://pessoavieira.pt/image/hero.jpg",
     "description": "Serviços de engenharia e consultoria industrial especializados em supply chain, planeamento de produção, Lean Manufacturing, ERP/MES e otimização operacional.",
     "email": "geral@pessoavieira.pt",
-    "areaServed": "Portugal",
+    "areaServed": "Europa",
     "serviceType": [
       "Engenharia Industrial",
       "Consultoria Industrial",
@@ -157,8 +157,6 @@
       padding: 24px;
     }
 
-    /* HERO */
-
 .hero {
 
   min-height: 260px;
@@ -185,66 +183,66 @@
   0 20px 60px rgba(0,0,0,0.15);
 }
 
-    .hero::before {
+.hero::before {
 
-      content: "";
+  content: "";
 
-      position: absolute;
+  position: absolute;
 
-      inset: 0;
+  inset: 0;
 
-      background:
-      linear-gradient(
-      rgba(15,23,42,0.82),
-      rgba(15,23,42,0.82)),
-      url('image/hero.jpg');
+  background:
+  linear-gradient(
+  rgba(15,23,42,0.82),
+  rgba(15,23,42,0.82)),
+  url('../image/hero.jpg');
 
-      background-size: cover;
+  background-size: cover;
 
-      background-position: center;
+  background-position: center;
 
-      z-index: 0;
-    }
+  z-index: 0;
+}
 
-    .hero::after {
+.hero::after {
 
-      content: "";
+  content: "";
 
-      position: absolute;
+  position: absolute;
 
-      top: -50%;
+  top: -50%;
 
-      left: -20%;
+  left: -20%;
 
-      width: 55%;
+  width: 55%;
 
-      height: 200%;
+  height: 200%;
 
-      background:
-      linear-gradient(
-      to right,
-      transparent,
-      rgba(255,255,255,0.18),
-      transparent);
+  background:
+  linear-gradient(
+  to right,
+  transparent,
+  rgba(255,255,255,0.18),
+  transparent);
 
-      transform: rotate(12deg);
+  transform: rotate(12deg);
 
-      animation:
-      lightSweep 8s ease-in-out infinite;
+  animation:
+  lightSweep 8s ease-in-out infinite;
 
-      z-index: 1;
-    }
+  z-index: 1;
+}
 
-    @keyframes lightSweep {
+@keyframes lightSweep {
 
-      0% {
-        left: -40%;
-      }
+  0% {
+    left: -40%;
+  }
 
-      100% {
-        left: 120%;
-      }
-    }
+  100% {
+    left: 120%;
+  }
+}
 
 .hero-content {
 
@@ -528,284 +526,6 @@ footer {
   font-size: 15px;
 }
 
-@media (max-width: 1100px) {
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    padding: 18px;
-  }
-
-  .hero {
-
-    min-height: auto;
-
-    padding: 35px 24px;
-
-    border-radius: 24px;
-
-    margin-bottom: 40px;
-  }
-
-  .hero-logo {
-
-    max-width: 100%;
-  }
-
-  .section-title {
-
-    font-size: 28px;
-
-    margin-bottom: 25px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .item p {
-    font-size: 18px;
-  }
-
-  .sobre,
-  .contactos {
-
-    padding: 35px 28px;
-  }
-
-  .sobre h2,
-  .contactos h2 {
-
-    font-size: 28px;
-  }
-
-  .sobre p,
-  .contactos p {
-
-    font-size: 17px;
-  }
-
-  .stat-number {
-    font-size: 36px;
-  }
-}
-
-  </style>
-
-</head>
-
-<body>
-
-<main>
-
-  <div class="container">
-
-<section class="hero">
-
-  <a href="/en/" class="lang-btn">
-    EN
-  </a>
-
-  <div class="hero-content">
-
-    <img src="image/logo.png"
-         alt="Pessoa Vieira - Engenharia e Consultoria Industrial"
-         class="hero-logo">
-
-  </div>
-
-</section>
-
-    <!-- ÁREAS -->
-
-    <h1 class="section-title">
-      Engenharia e Consultoria Industrial
-    </h1>
-
-    <div class="grid">
-
-      <div class="item">
-        <img src="image/engenharia.png"
-             alt="Serviços de engenharia e consultoria industrial"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Engenharia e consultoria industrial orientadas para eficiência operacional e crescimento sustentável.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/planeamento.png"
-             alt="Planeamento e controlo da produção"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Planeamento e controlo de produção com foco em produtividade, capacidade e fiabilidade operacional.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/supplychain.png"
-             alt="Supply Chain e logística industrial"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Otimização de supply chain e logística industrial em ambientes de elevada exigência.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/capacidade.png"
-             alt="Planeamento de capacidade e ramp-up industrial"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Planeamento de capacidade produtiva e gestão de ramp-up industrial.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/lean.png"
-             alt="Melhoria contínua e Lean Manufacturing"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Implementação de metodologias Lean Manufacturing e melhoria contínua.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/aeronautica.png"
-             alt="Experiência na indústria aeronáutica"
-             loading="lazy">
-
-        <div class="item-content">
-          <p>Experiência consolidada em indústria aeronáutica e aeroestruturas.</p>
-        </div>
-      </div>
-
-<div class="item">
-  <img src="image/projetos.png"
-       alt="Gestão de projetos industriais"
-       loading="lazy">
-
-  <div class="item-content">
-    <p>Coordenação e gestão de projetos industriais multidisciplinares.</p>
-  </div>
-</div>
-
-<div class="item">
-  <img src="image/erp_mes.png"
-       alt="ERP e MES"
-       loading="lazy">
-
-  <div class="item-content">
-    <p>Implementação e otimização de sistemas ERP e MES para digitalização industrial.</p>
-  </div>
-</div>
-
-<div class="item">
-  <img src="image/processo.png"
-       alt="Engenharia de processo e industrialização"
-       loading="lazy">
-
-  <div class="item-content">
-    <p>Engenharia de processo e industrialização de produto orientadas para robustez operacional.</p>
-  </div>
-</div>
-
-
-    </div>
-
-    <section class="sobre">
-
-      <h2>Sobre a Empresa</h2>
-
-      <p>
-        A Pessoa Vieira desenvolve serviços de engenharia e consultoria industrial assentes numa sólida experiência em gestão industrial, supply chain, planeamento de produção e melhoria contínua. A experiência adquirida em ambientes industriais altamente exigentes, incluindo o setor aeronáutico, permite oferecer soluções orientadas para eficiência operacional, otimização de processos e crescimento sustentável das organizações.
-      </p>
-
-    </section>
-
-    <div class="stats">
-
-      <div class="stat">
-        <div class="stat-number">15+</div>
-        <div class="stat-text">Anos de experiência industrial</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">ERP</div>
-        <div class="stat-text">Experiência em SAP e PHC</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">MES</div>
-        <div class="stat-text">Digitalização e integração industrial</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">Lean</div>
-        <div class="stat-text">5S, TPM, Kaizen e Kanban</div>
-      </div>
-
-    </div>
-
-<section class="contactos">
-
-  <h2>Contactos</h2>
-
-  <p>
-    Para mais informações ou contactos comerciais:
-  </p>
-
-  <p>
-
-    <a href="mailto:geral@pessoavieira.pt">
-      geral@pessoavieira.pt
-    </a>
-
-  </p>
-
-</section>
-
-    <footer>
-      © Pessoa Vieira, Lda
-    </footer>
-
-  </div>
-
-</main>
-<!-- AVISO DE COOKIES -->
-
-<div id="cookie-banner" class="cookie-banner">
-
-  <p>
-    Este website utiliza cookies para melhorar a experiência de navegação.
-    Ao continuar a utilizar o site, aceita a utilização de cookies.
-  </p>
-
-  <button id="accept-cookies">
-    Aceitar
-  </button>
-
-</div>
-
-<style>
-
 .cookie-banner {
 
   position: fixed;
@@ -870,24 +590,18 @@ footer {
   font-weight: 600;
 
   font-size: 14px;
-
-  transition:
-  transform 0.25s ease,
-  opacity 0.25s ease;
-
-  white-space: nowrap;
 }
-
-.cookie-banner button:hover {
-
-  opacity: 0.92;
-
-  transform: translateY(-1px);
-}
-
-/* MOBILE */
 
 @media (max-width: 768px) {
+
+  .container {
+    padding: 18px;
+  }
+
+  .grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
 
   .cookie-banner {
 
@@ -904,19 +618,8 @@ footer {
     flex-direction: column;
 
     align-items: stretch;
-
-    gap: 18px;
   }
 
-  .cookie-banner p {
-
-    font-size: 16px;
-
-    line-height: 1.7;
-
-    text-align: left;
-  }
-  
   .cookie-banner button {
 
     width: 100%;
@@ -924,12 +627,207 @@ footer {
     padding: 16px;
 
     font-size: 16px;
-
-    border-radius: 14px;
   }
 }
 
-</style>
+  </style>
+
+</head>
+
+<body>
+
+<main>
+
+<div class="container">
+
+<section class="hero">
+
+  <a href="/en/" class="lang-btn">
+    EN
+  </a>
+
+  <div class="hero-content">
+
+    <img src="../image/logo.png"
+         alt="Pessoa Vieira - Engenharia e Consultoria Industrial"
+         class="hero-logo">
+
+  </div>
+
+</section>
+
+<h1 class="section-title">
+  Engenharia e Consultoria Industrial
+</h1>
+
+<div class="grid">
+
+  <div class="item">
+    <img src="../image/engenharia.png"
+         alt="Engenharia e consultoria industrial"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Engenharia e consultoria industrial focadas na eficiência operacional e no crescimento sustentável.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/planeamento.png"
+         alt="Planeamento e controlo da produção"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Planeamento e controlo da produção focados na produtividade, capacidade e fiabilidade operacional.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/supplychain.png"
+         alt="Supply chain e logística industrial"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Otimização da supply chain e logística industrial para ambientes altamente exigentes.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/capacidade.png"
+         alt="Planeamento de capacidade e ramp-up industrial"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Planeamento de capacidade produtiva e gestão de ramp-up industrial.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/lean.png"
+         alt="Melhoria contínua e Lean Manufacturing"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Implementação de metodologias Lean Manufacturing e melhoria contínua.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/aeronautica.png"
+         alt="Experiência na indústria aeronáutica"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Vasta experiência na indústria aeronáutica e aeroestruturas.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/projetos.png"
+         alt="Gestão de projetos industriais"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Coordenação e gestão de projetos industriais multidisciplinares.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/erp_mes.png"
+         alt="Sistemas ERP e MES"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Implementação e otimização de sistemas ERP e MES para digitalização industrial.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="../image/processo.png"
+         alt="Engenharia de processo e industrialização"
+         loading="lazy">
+
+    <div class="item-content">
+      <p>Engenharia de processo e industrialização de produto focadas na robustez operacional.</p>
+    </div>
+  </div>
+
+</div>
+
+<section class="sobre">
+
+  <h2>Sobre a Empresa</h2>
+
+  <p>
+    A Pessoa Vieira presta serviços de engenharia e consultoria industrial com base numa vasta experiência em gestão industrial, supply chain, planeamento de produção e melhoria contínua. A experiência adquirida em ambientes industriais altamente exigentes, incluindo o setor aeronáutico, permite desenvolver soluções focadas na eficiência operacional, otimização de processos e crescimento sustentável das organizações.
+  </p>
+
+</section>
+
+<div class="stats">
+
+  <div class="stat">
+    <div class="stat-number">15+</div>
+    <div class="stat-text">Anos de experiência industrial</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">ERP</div>
+    <div class="stat-text">Experiência em SAP e PHC</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">MES</div>
+    <div class="stat-text">Digitalização industrial</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number">Lean</div>
+    <div class="stat-text">5S, TPM, Kaizen e Kanban</div>
+  </div>
+
+</div>
+
+<section class="contactos">
+
+  <h2>Contactos</h2>
+
+  <p>
+    Para mais informações ou contactos comerciais:
+  </p>
+
+  <p>
+
+    <a href="mailto:geral@pessoavieira.pt">
+      geral@pessoavieira.pt
+    </a>
+
+  </p>
+
+</section>
+
+<footer>
+  © Pessoa Vieira, Lda
+</footer>
+
+</div>
+
+</main>
+
+<!-- AVISO DE COOKIES -->
+
+<div id="cookie-banner" class="cookie-banner">
+
+  <p>
+    Este website utiliza cookies para melhorar a experiência de navegação.
+    Ao continuar a utilizar o website, aceita a utilização de cookies.
+  </p>
+
+  <button id="accept-cookies">
+    Aceitar
+  </button>
+
+</div>
 
 <script>
 
@@ -955,7 +853,6 @@ acceptCookies.addEventListener('click', () => {
 });
 
 </script>
-  
 
 </body>
 
