@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pessoavieira.pt/sitemap.xml
+Sitemap: https://www.pessoavieira.pt/sitemap.xml
