@@ -808,7 +808,7 @@ footer {
 <div class="stats">
 
   <div class="stat">
-    <div class="stat-number">15+</div>
+    <div class="stat-number" data-target="15">0</div>
     <div class="stat-text">Anos de experiência industrial</div>
   </div>
 
@@ -895,6 +895,55 @@ acceptCookies.addEventListener('click', () => {
 
 </script>
 
+localStorage.setItem(
+  'cookiesAccepted',
+  'true'
+);
+
+cookieBanner.style.display = 'none';
+});
+
+</script>
+
+<script>
+
+const counters =
+  document.querySelectorAll('.stat-number[data-target]');
+
+counters.forEach(counter => {
+
+  const target =
+    +counter.getAttribute('data-target');
+
+  let current = 0;
+
+  const increment =
+    target / 40;
+
+  const updateCounter = () => {
+
+    current += increment;
+
+    if (current < target) {
+
+      counter.innerText =
+        Math.ceil(current);
+
+      requestAnimationFrame(updateCounter);
+
+    } else {
+
+      counter.innerText =
+        target + '+';
+    }
+  };
+
+  updateCounter();
+});
+
+</script>
+
 </body>
 
 </html>
+
