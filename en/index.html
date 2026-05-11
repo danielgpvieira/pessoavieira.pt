@@ -435,7 +435,27 @@
 
   box-shadow:
   0 10px 30px rgba(0,0,0,0.06);
+
+  transition:
+  transform 0.35s ease,
+  box-shadow 0.35s ease,
+  background 0.35s ease;
 }
+
+.stat:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+  0 20px 40px rgba(29,78,216,0.12);
+
+  background:
+  linear-gradient(
+  to bottom,
+  #ffffff,
+  #f8fbff);
+}
+    
 
 .stat-number {
 
@@ -446,8 +466,11 @@
   color: #1d4ed8;
 
   margin-bottom: 12px;
-}
 
+  transition:
+  transform 0.35s ease,
+  color 0.35s ease;
+}
 .stat-text {
 
   font-size: 18px;
