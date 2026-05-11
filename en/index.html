@@ -808,7 +808,7 @@ footer {
 <div class="stats">
 
   <div class="stat">
-    <div class="stat-number">15+</div>
+    <div class="stat-number" data-target="15">0</div>
     <div class="stat-text">Years of industrial experience</div>
   </div>
 
@@ -891,6 +891,63 @@ acceptCookies.addEventListener('click', () => {
   );
 
   cookieBanner.style.display = 'none';
+});
+
+</script>
+
+  <script>
+
+const counters =
+  document.querySelectorAll('.stat-number[data-target]');
+
+const observer =
+  new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        const counter =
+          entry.target;
+
+        const target =
+          +counter.getAttribute('data-target');
+
+        let current = 0;
+
+        const increment =
+          target / 200;
+
+        const updateCounter = () => {
+
+          current += increment;
+
+          if (current < target) {
+
+            counter.innerText =
+              Math.ceil(current);
+
+            requestAnimationFrame(updateCounter);
+
+          } else {
+
+            counter.innerText =
+              target + '+';
+          }
+        };
+
+        updateCounter();
+
+        observer.unobserve(counter);
+      }
+    });
+
+  }, {
+    threshold: 0.5
+  });
+
+counters.forEach(counter => {
+  observer.observe(counter);
 });
 
 </script>
